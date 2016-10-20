@@ -1,0 +1,19 @@
+{
+  "name": "functional-demo",
+  "version": "0.0.0",
+  "description": "The looping demo redone functionally",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jondejong/functional-reactive-programming.git"
+  },
+  "author": "Jon DeJong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jondejong/functional-reactive-programming/issues"
+  },
+  "homepage": "https://github.com/jondejong/functional-reactive-programming#readme"
+}
