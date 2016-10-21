@@ -1,0 +1,14 @@
+<md-card>
+  <md-card-content>
+      <div>Hi, my name is</div>
+      <div>
+        <md-input class="input-full-width"
+                  placeholder="Type Your Name"
+                  [(ngModel)]="name"
+                  (keyup)="onNameChange()"
+                  name="name"
+                  dividerColor="warm" >
+        </md-input>
+      </div>
+  </md-card-content>
+</md-card>

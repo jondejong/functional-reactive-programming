@@ -1,11 +1,11 @@
 {
-  "name": "functional-demo",
+  "name": "functional-reactive-programming",
   "version": "0.0.0",
-  "description": "The looping demo redone functionally",
+  "description": "Code from my Functional Reactive Programming talks",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create": "ng new angular-reactive-demo"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,14 @@
     "url": "https://github.com/jondejong/functional-reactive-programming/issues"
   },
   "homepage": "https://github.com/jondejong/functional-reactive-programming#readme",
-   "dependencies": {
+  "dependencies": {
     "fs-extra": "0.30.0",
     "path": "0.12.7"
+  },
+  "devDependencies": {
+    "angular-cli": "1.0.0-beta.18",
+    "chai": "3.5.0",
+    "mocha": "3.1.2",
+    "sinon": "1.17.6"
   }
 }

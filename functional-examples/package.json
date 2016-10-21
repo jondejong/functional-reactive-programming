@@ -1,7 +1,7 @@
 {
-  "name": "functional-demo",
+  "name": "functional-examples",
   "version": "0.0.0",
-  "description": "The looping demo redone functionally",
+  "description": "Map, Filter, and Reduce examples",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -17,7 +17,7 @@
     "url": "https://github.com/jondejong/functional-reactive-programming/issues"
   },
   "homepage": "https://github.com/jondejong/functional-reactive-programming#readme",
-   "dependencies": {
+  "dependencies": {
     "fs-extra": "0.30.0",
     "path": "0.12.7"
   }
