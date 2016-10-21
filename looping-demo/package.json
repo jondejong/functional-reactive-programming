@@ -19,6 +19,6 @@
   "homepage": "https://github.com/jondejong/functional-reactive-programming#readme",
   "dependencies": {
     "fs-extra": "0.30.0",
-    "path": "^0.12.7"
+    "path": "0.12.7"
   }
 }
