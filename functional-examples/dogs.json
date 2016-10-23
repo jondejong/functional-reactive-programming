@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Bear",
+        "breed": "Collie",
+        "age": 4
+    },
+    {
+        "name": "Snoop",
+        "breed": "Puggle",
+        "age": 5
+    },
+    {
+        "name": "Georgia",
+        "breed": "Lab",
+        "age": 7
+    },
+    {
+        "name": "Cosmos",
+        "breed": "Bulldog",
+        "age": 7
+    },
+    {
+        "name": "Nelly",
+        "breed": "Pincher",
+        "age": 2
+    },
+    {
+        "name": "Coco",
+        "breed": "Puggle",
+        "age": 2
+    }
+]
