@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha processor.spec.js"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,13 @@
     "url": "https://github.com/jondejong/functional-reactive-programming/issues"
   },
   "homepage": "https://github.com/jondejong/functional-reactive-programming#readme",
-   "dependencies": {
+  "dependencies": {
     "fs-extra": "0.30.0",
     "path": "0.12.7"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "3.1.2",
+    "sinon": "1.17.6"
   }
 }
