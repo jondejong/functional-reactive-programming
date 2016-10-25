@@ -1,5 +1,3 @@
-const _ = require('lodash');
-
 let controller = {};
 
 let id = 1;
@@ -22,7 +20,7 @@ controller.save = (req, res) => {
 
 controller.delete = (req, res) => {
     const id = req.params.id;
-    dogs = _.filter(dogs, (dog)=> dog.id != id)
+    dogs = dogs.filter((dog)=> dog.id != id)
     res.json({message: 'deleted'})
 };
 
