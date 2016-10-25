@@ -88,27 +88,52 @@ describe('processor', () => {
             expect(processor.stateMapper(state)).to.deep.equal(expected)
         })
     })
+    describe('cloneState', () => {
+        let processor
+        beforeEach(() => {
+            processor = require('./processor')
+        })
+        it('should clone the current state', () => {
+            let currentState = [
+                {
+                    state: 'MN', cities: [
+                        { name: 'Minneapols', population: '42' },
+                        { name: 'St. Paul', population: '41' }
+                    ]
+                },
+                {
+                    state: 'IL', cities: [
+                        { name: 'Chicago', population: '422' }
+                    ]
+                }
+            ]
+
+            expect(processor.cloneState(currentState)).to.deep.equal(currentState)
+        })
+    })
     describe('reducer', () => {
         it('should add to the population of an existing city', () => {
             let city = {
                 name: 'Chicago', population: 40
             }
             let state = {
-                name: 'IL', cities: [city]
+                state: 'IL', cities: [city]
             }
             let processor = require('./processor')
+            let currentState = [state]
+
             const trueFilter = () => {
                 return true
             }
+            processor.cloneState = sinon.stub().returns(currentState)
             processor.stateFilter = sinon.stub().returns(trueFilter)
             processor.cityFilter = sinon.stub().returns(trueFilter)
-            
-            let currentState  = [state]
-            let zip = {state: 'IL', city: 'Chicago', pop: 2}
+
+            let zip = { state: 'IL', city: 'Chicago', pop: 2 }
             const newState = processor.reducer(currentState, zip)
             console.log('newState', newState)
             expect(newState.length).to.equal(1)
-            expect(newState[0].name).to.equal('IL')
+            expect(newState[0].state).to.equal('IL')
             expect(newState[0].cities.length).to.equal(1)
             expect(newState[0].cities[0].name).to.equal('Chicago')
             expect(newState[0].cities[0].population).to.equal(42)

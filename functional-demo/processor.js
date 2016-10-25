@@ -12,15 +12,30 @@ processor.cityFilter = zip => {
     }
 }
 
+processor.cloneState = (currentState) => {
+    return currentState.map((state) => {
+        return {
+            state: state.state,
+            cities: state.cities.map(city => {
+                return {
+                    name: city.name,
+                    population: city.population
+                }
+            })
+        }
+    })
+}
+
 processor.reducer = (currentState, zip) => {
-    let foundStates = currentState.filter(processor.stateFilter(zip))
+    let newState = processor.cloneState(currentState)
+    let foundStates = newState.filter(processor.stateFilter(zip))
 
     if (foundStates.length < 1) {
         const state = {
             state: zip.state,
             cities: []
         }
-        currentState.push(state)
+        newState.push(state)
         foundStates.push(state)
     }
     const state = foundStates[0]
@@ -36,7 +51,7 @@ processor.reducer = (currentState, zip) => {
     }
     const city = foundCities[0]
     city.population += zip.pop
-    return currentState
+    return newState
 }
 
 processor.cityComparator = (a, b) => {
