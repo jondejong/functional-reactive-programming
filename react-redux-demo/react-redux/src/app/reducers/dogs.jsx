@@ -1,8 +1,5 @@
 import {ADD_DOG, REMOVE_DOG, LOAD_DOGS} from '../actions/ActionTypes'
 
-let filter = require('lodash/filter')
-let map = require('lodash/map')
-
 const intialState = {
   dogs: [],
   loaded: false
@@ -26,7 +23,7 @@ function dogs(state = intialState, action) {
       break
 
     case REMOVE_DOG:
-      newState.dogs = filter(state.dogs, (dog)=> dog.id != action.id)
+      newState.dogs = state.dogs.filter( (dog)=> dog.id != action.id)
       break
     
     case LOAD_DOGS:
