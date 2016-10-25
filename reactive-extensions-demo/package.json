@@ -1,0 +1,15 @@
+{
+  "name": "reactive-extensions-demo",
+  "version": "0.0.0",
+  "description": "Demo of RxJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jon DeJong",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "5.0.0-rc.1"
+  }
+}
