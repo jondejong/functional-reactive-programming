@@ -8,15 +8,13 @@ import { NameService } from '../name.service';
   styleUrls: ['./top.component.scss']
 })
 export class TopComponent {
-  
-  name:string;
 
-  constructor(private nameService:NameService) {
+  name: string;
+
+  constructor(private nameService: NameService) {
     this.name = '';
     this.nameService.dispatch.subscribe(value => {
       this.name = value;
     })
   }
-
-
 }
