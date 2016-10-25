@@ -1,0 +1,29 @@
+{
+  "name": "react-seed-api",
+  "version": "0.0.2",
+  "description": "OPI React Seed Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jondejong/js-seeds"
+  },
+  "author": "Object Partners",
+  "bugs": {
+    "url": "https://github.com/jondejong/js-seeds/issues"
+  },
+  "homepage": "https://github.com/jondejong/js-seeds#readme",
+  "dependencies": {
+    "async": "2.0.0-rc.4",
+    "body-parser": "1.15.1",
+    "express": "4.13.4",
+    "lodash": "4.12.0",
+    "mongoose": "4.4.17"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
