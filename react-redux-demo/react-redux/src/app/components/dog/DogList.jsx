@@ -46,7 +46,7 @@ class RecipeList extends React.Component {
     } else {
       content = (
         <div>
-          <CircularProgress size={2}/>
+          <CircularProgress size={60} thickness={7}/>
         </div>
       )
     }
