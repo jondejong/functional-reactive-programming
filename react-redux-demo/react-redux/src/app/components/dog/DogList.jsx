@@ -5,7 +5,7 @@ import CircularProgress from 'material-ui/CircularProgress';
 
 import Dog from './Dog'
 
-class RecipeList extends React.Component {
+class DogList extends React.Component {
 
   componentDidMount = () => {
     this.props.loadDogs()
@@ -59,4 +59,4 @@ class RecipeList extends React.Component {
   }
 }
 
-export default RecipeList
+export default DogList
