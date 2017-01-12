@@ -8,22 +8,20 @@ const ADD_DOG = 'ADD_DOG';
 const REMOVE_DOG = 'REMOVE_DOG';
 
 const reduce = (state = initialState, action) => {
-    let newState = {
+    const newState = {
         dogs: state.dogs.map(dog => dog)
     }
     switch (action.type) {
         case ADD_DOG:
-        newState.dogs.push({
-            id: id++, 
-            name: action.dog.name,
-            breed: action.dog.breed,
-            age: action.dog.age
-        })
-        break;
+            const dog = Object.assign(action.dog)
+            dog.id = id++
+
+            newState.dogs.push(dog)
+            break;
 
         case REMOVE_DOG:
-        newState.dogs = newState.dogs.filter(dog => dog.id != action.id)
-        break
+            newState.dogs = newState.dogs.filter(dog => dog.id != action.id)
+            break
     }
     return newState
 }

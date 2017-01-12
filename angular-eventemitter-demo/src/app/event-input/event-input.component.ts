@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { NameService } from '../name.service';
+import { Subject } from 'rxjs/Subject';
 
 @Component({
   selector: 'event-input',
@@ -14,11 +15,15 @@ export class EventInputComponent {
   @Output()
   handler: EventEmitter<string>;
 
+  name: Subject<any>;
+
   constructor(private nameService: NameService) {
     this.handler = new EventEmitter<string>();
-  }
-
-  onNameChange(event) {
-    this.handler.emit(event.target.value);
+    this.name = new Subject<any>();
+    this.name
+    .map(event => event.target.value)
+    .subscribe( value => {
+      this.nameService.name = value
+    })
   }
 }
