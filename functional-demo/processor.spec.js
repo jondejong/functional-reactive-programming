@@ -131,7 +131,7 @@ describe('processor', () => {
 
             let zip = { state: 'IL', city: 'Chicago', pop: 2 }
             const newState = processor.reducer(currentState, zip)
-            console.log('newState', newState)
+
             expect(newState.length).to.equal(1)
             expect(newState[0].state).to.equal('IL')
             expect(newState[0].cities.length).to.equal(1)

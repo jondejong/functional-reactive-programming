@@ -15,7 +15,7 @@ export class NameService {
     this._name.next(value);
   }
 
-  get dispatch():Observable<string> {
-    return this._name.asObservable();
+  get dispatch():Subject<string> {
+    return this._name;
   }
 }

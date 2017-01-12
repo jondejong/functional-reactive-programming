@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jondejong/js-seeds"
+    "url": "ttps://github.com/jondejong/functional-reactive-programming"
   },
-  "author": "Object Partners",
+  "author": "Jon DeJong",
   "bugs": {
-    "url": "https://github.com/jondejong/js-seeds/issues"
+    "url": "https://github.com/jondejong/functional-reactive-programming/issues"
   },
-  "homepage": "https://github.com/jondejong/js-seeds#readme",
+  "homepage": "https://github.com/jondejong/functional-reactive-programming#readme",
   "dependencies": {
     "material-ui": "0.16.1",
     "react": "15.3.2",

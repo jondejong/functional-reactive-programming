@@ -4,8 +4,7 @@
       <div>
         <md-input class="input-full-width"
                   placeholder="Type Your Name"
-                  [(ngModel)]="name"
-                  (keyup)="onNameChange()"
+                  (keyup)="name.next($event)"
                   name="name"
                   dividerColor="warm" >
         </md-input>

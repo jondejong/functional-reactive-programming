@@ -2,7 +2,7 @@ const ADD_DOG = 'ADD_DOG'
 const REMOVE_DOG = 'REMOVE_THING'
 const LOAD_DOGS = 'LOAD_DOGS'
 
-let addDog = (dog) => {
+const addDog = (dog) => {
   return {type: ADD_DOG, dog: dog}
 }
 
