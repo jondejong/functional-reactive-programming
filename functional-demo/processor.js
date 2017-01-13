@@ -1,5 +1,23 @@
 let processor = {}
 
+processor.cityComparator = (a, b) => {
+    if (a.population < b.population) {
+        return 1
+    } else if (b.population < a.population) {
+        return -1
+    }
+    return 0
+}
+
+processor.stateComparator = (a, b) => {
+    if (a.state < b.state) {
+        return -1
+    } else if (b.state < a.state) {
+        return 1
+    }
+    return 0
+}
+
 processor.stateFilter = zip => {
     return state => {
         return state.state == zip.state
@@ -54,24 +72,6 @@ processor.reducer = (currentState, zip) => {
     return newState
 }
 
-processor.cityComparator = (a, b) => {
-    if (a.population < b.population) {
-        return 1
-    } else if (b.population < a.population) {
-        return -1
-    }
-    return 0
-}
-
-processor.stateComparator = (a, b) => {
-    if (a.state < b.state) {
-        return -1
-    } else if (b.state < a.state) {
-        return 1
-    }
-    return 0
-}
-
 processor.stateMapper = state => {
     state.cities = state.cities.sort(processor.cityComparator)
     return {
@@ -81,7 +81,7 @@ processor.stateMapper = state => {
 }
 
 processor.process = data => {
-    return data.reduce(reducer, []).map(stateMapper).sort(processor.stateComparator);
+    return data.reduce(processor.reducer, []).map(processor.stateMapper).sort(processor.stateComparator);
 }
 
 module.exports = processor

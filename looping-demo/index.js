@@ -47,7 +47,7 @@ Object.keys(states).forEach((stateName) => {
   
 })
 
-// Turn our hashmap into an arry
+// Turn our hashmap into an array
 let final = []
 
 // For each state
