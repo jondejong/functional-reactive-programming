@@ -3,7 +3,7 @@ const path = require('path');
 
 const dogs = fs.readJsonSync(path.join(__dirname, 'dogs.json'));
 
-// console.log(dogs)
+console.log(dogs)
 
 // Map
 const names = dogs.map(dog => dog.name)
@@ -23,4 +23,4 @@ const sumOfAges = dogs.reduce( (currentValue, dog) => {
     return currentValue + dog.age
 }, 0)
 
-console.log(sumOfAges)
+// console.log(sumOfAges)
